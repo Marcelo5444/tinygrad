@@ -62,6 +62,12 @@ class Linear:
   def __call__(self, x):
     return x.linear(self.weight.transpose(), self.bias)
 
+class Idenity:
+  def __init__(self):
+    pass
+  def __call_(self,x):
+    return x
+
 class GroupNorm:
   def __init__(self, num_groups:int, num_channels:int, eps:float=1e-5, affine:bool=True):
     self.num_groups, self.num_channels, self.eps = num_groups, num_channels, eps
